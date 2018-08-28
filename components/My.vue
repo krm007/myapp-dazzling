@@ -2,21 +2,20 @@
   <div>
     <h1>这是个人中心</h1>
 
-    
+     <my-tab-bar></my-tab-bar>
+
+
   </div>
 </template>
 
 <script>
+import myTabBar from "@/components/MyTabBar";
 
-import { Tabbar, TabbarItem, Group, Cell } from "vux";
 
 export default {
-//   name: "my",
   components: {
-    Tabbar,
-    TabbarItem,
-    Group,
-    Cell
+    myTabBar,
+   
   },
   data() {
     return {
