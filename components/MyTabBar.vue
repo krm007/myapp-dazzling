@@ -3,7 +3,7 @@
 
     <!-- 这是导航 -->
     <tabbar>
-      <tabbar-item>
+      <tabbar-item link="/">
         <img slot="icon" src="../assets/tab01.png">
         <span slot="label">首页</span>
       </tabbar-item>
@@ -43,4 +43,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.weui-tabbar{
+  position: fixed;
+  bottom: 0;
+}
 </style>
