@@ -9,8 +9,9 @@
     </cell>
 
     <group :title="ms_1">
+      <cell :title="ms_0" @click.native="showModule" is-link></cell>
       <cell :title="ms_2" link="/login" ></cell>
-      <cell :title="ms_3" link="{path:'/'}" ></cell>
+      <cell :title="ms_3" link="/mypublish" ></cell>
       
     </group>
     
@@ -25,10 +26,11 @@
 
 </i18n>
 <script>
-import { Cell, CellBox, CellFormPreview, Group, Badge } from 'vux'
+import { AlertModule, Cell, CellBox, CellFormPreview, Group, Badge } from 'vux'
 
 export default {
   components: {
+    AlertModule,
     Group,
     Cell,
     CellFormPreview,
@@ -40,9 +42,24 @@ export default {
       ms:"我的账户",
       msg:"你好哇，感谢关注",
       ms_1:"关于我的",
+      ms_0:"注册",
       ms_2:"登录Dazzling",
       ms_3:"我的发布"
     };
+  },
+  methods:{
+     showModule () {
+      AlertModule.show({
+        title: '请前往PC端注册账号',
+        content: this.ms_0="已有账号，请直接登录",
+        onShow () {
+          console.log('Module: I\'m showing')
+        },
+        onHide () {
+          console.log('Module: I\'m hiding now')
+        }
+      })
+    }
   }
 };
 </script>
