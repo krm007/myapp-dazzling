@@ -4,8 +4,10 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router/appindex'
-import myHeader from "@/components/MyHeader"
 import myTabBar from "@/components/MyTabBar"
+
+import myHeader from "@/components/MyHeader"
+import xflexbox from '@/components/xflexbox'
 import axios from "axios"
 import Qs from "qs"
 
@@ -20,6 +22,7 @@ FastClick.attach(document.body)
 Vue.config.productionTip = false;
 Vue.component('myHeader', myHeader);
 Vue.component('myTabBar', myTabBar);
+Vue.component('xflexbox', xflexbox)
 
 /* eslint-disable no-new */
 new Vue({
